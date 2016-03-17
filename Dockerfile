@@ -131,9 +131,10 @@ RUN cd /usr/share/cacti/site/plugins/ && \
   tar -zxvf syslog-v1.22-2.tgz && \
   rm syslog-v1.22-2.tgz
 
-# Install THold Plugin
+# Install THold Plugin 
+# (using a temp fix for issue with https://github.com/Usuychik/thold)
 RUN cd /usr/share/cacti/site/plugins/ && \
-  git clone https://github.com/Usuychik/thold
+  git clone https://github.com/nmarus/thold
 
 # Service Ports
 EXPOSE 80 161
